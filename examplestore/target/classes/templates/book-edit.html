@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редактирование информации</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div class="container mt-5">
+    <h3>Редактирование информации</h3>
+    <div th:each="el : ${books}">
+        <form method="post">
+            <input type="text" th:value="${el.title}" name="title"  class="form-control"><br>
+            <input type="text" th:value="${el.author}" name="author"  class="form-control"><br>
+            <input type="number" th:value="${el.page}" name="page" class="form-control"><br>
+            <input type="number" th:value="${el.price}" name="price" class="form-control"><br>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
